@@ -10,7 +10,7 @@ class mapPage extends State<IntroPage>{
 
   @override
   void initState() {
-    _shapeSource = MapShapeSource.asset('assets/world-map.json', shapeDataField: 'STATE_NAME');
+    _shapeSource = MapShapeSource.asset('assets/world-map.json', shapeDataField: "name");
     super.initState();
     _zoomPanBehavior = MapZoomPanBehavior();
   }
@@ -45,6 +45,8 @@ class mapPage extends State<IntroPage>{
               color: Colors.white,
               border: Border.all(color: Colors.indigo),
               borderRadius: BorderRadius.all(Radius.circular(20))
+
+
           ),
         ),
     ),
