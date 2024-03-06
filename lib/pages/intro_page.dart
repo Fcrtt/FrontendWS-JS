@@ -6,11 +6,13 @@ class IntroPage extends StatefulWidget {
 }
 class mapPage extends State<IntroPage>{
   late MapShapeSource _shapeSource;
+  late MapZoomPanBehavior _zoomPanBehavior;
 
   @override
   void initState() {
     _shapeSource = MapShapeSource.asset('assets/world-map.json', shapeDataField: 'STATE_NAME');
     super.initState();
+    _zoomPanBehavior = MapZoomPanBehavior();
   }
   @override
   Widget build(BuildContext context){
@@ -28,7 +30,7 @@ class mapPage extends State<IntroPage>{
             borderRadius: BorderRadius.all(Radius.circular(20))
         ),
         child: SfMaps(
-        layers: [MapShapeLayer(source: _shapeSource),],
+        layers: [MapShapeLayer(source: _shapeSource, zoomPanBehavior: _zoomPanBehavior)],
       ),
     ),
     ),
