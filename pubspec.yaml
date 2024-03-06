@@ -36,6 +36,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
   fl_chart: ^0.66.2
+  syncfusion_flutter_maps: ^24.2.9
 
 dev_dependencies:
   flutter_test:
@@ -58,6 +59,8 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  assets:
+    - assets/world-map.json
 
   # To add assets to your application, add an assets section, like this:
   # assets:
