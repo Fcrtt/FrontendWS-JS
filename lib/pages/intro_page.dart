@@ -15,8 +15,21 @@ class mapPage extends State<IntroPage>{
   @override
   void initState() {
     _data = <Model>[
-      Model('United States', 'Gold : 1061\nSilver : 830\nBronze : 738\nTotal : 2629'),
-      Model('Afghanistan', 'Gold : 5\nSilver : 4\nBronze : 8\nTotal : 17'),
+      const Model('United States', 'Gold : 1061\nSilver : 830\nBronze : 738\nTotal : 2629'),
+      const Model('Afghanistan', 'Gold : 0\nSilver : 0\nBronze : 2\nTotal : 2'),
+      const Model('Algeria', 'Gold : 5\nSilver : 4\nBronze : 8\nTotal : 17'),
+      const Model('Argentina', 'Gold : 21\nSilver : 26\nBronze : 30\nTotal : 77'),
+      const Model('Armenia', 'Gold : 2\nSilver : 8\nBronze : 8\nTotal : 18'),
+      const Model('Australia', 'Gold : 164\nSilver : 173\nBronze : 210\nTotal : 547'),
+      const Model('Austria', 'Gold : 20\nSilver : 35\nBronze : 41\nTotal : 96'),
+      const Model('Azerbaijan', 'Gold : 7\nSilver : 14\nBronze : 28\nTotal : 49'),
+      const Model('Bahamas', 'Gold : 8\nSilver : 2\nBronze : 6\nTotal : 16'),
+      const Model('Belarus', 'Gold : 13\nSilver : 30\nBronze : 42\nTotal : 85'),
+      const Model('Belgium', 'Gold : 44\nSilver : 56\nBronze : 57\nTotal : 157'),
+      const Model('Botswana', 'Gold : 0\nSilver : 1\nBronze : 1\nTotal : 2'),
+      const Model('Brazil', 'Gold : 37\nSilver : 42\nBronze : 71\nTotal : 150'),
+
+
     ];
     _shapeSource = MapShapeSource.asset('assets/world-map.json',
       shapeDataField: "name",
@@ -29,7 +42,7 @@ class mapPage extends State<IntroPage>{
   @override
   Widget build(BuildContext context){
     return Container(
-      color: Color(0xFF4A2545),
+      color: const Color(0xFF4A2545),
     child:   Row(
       children: [
         Expanded(flex: 2,
@@ -37,7 +50,7 @@ class mapPage extends State<IntroPage>{
           //margin: const EdgeInsets.all(20.0),
           padding: const EdgeInsets.all(10.0),
           child: PhysicalModel(
-          color: Color(0xFFDCCCA3),
+          color: const Color(0xFFDCCCA3),
           borderRadius: BorderRadius.circular(20.0), // Rayon des coins
           elevation: 8,
             child:
@@ -61,7 +74,7 @@ class mapPage extends State<IntroPage>{
                               child: Text(
                                 _data[index].country,
                                 style: TextStyle(
-                                    color: Color(0xFFD34E24),
+                                    color: const Color(0xFFD34E24),
                                     decoration: TextDecoration.none,
                                     fontSize: Theme.of(context)
                                         .textTheme
@@ -85,7 +98,7 @@ class mapPage extends State<IntroPage>{
                           _data[index].palmares,
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              color: Color(0xFFD34E24),
+                              color: const Color(0xFFD34E24),
                               decoration: TextDecoration.none,
                               fontSize:
                               Theme.of(context).textTheme.bodyMedium!.fontSize),
@@ -113,7 +126,7 @@ class mapPage extends State<IntroPage>{
           child: Padding(
             padding: const EdgeInsets.all(10),
           child: PhysicalModel(
-            color: Color(0xFFDCCCA3),
+            color: const Color(0xFFDCCCA3),
             borderRadius: BorderRadius.circular(20.0), // Rayon des coins
             elevation: 8,
             child:
