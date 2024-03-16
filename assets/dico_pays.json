@@ -1,0 +1,938 @@
+{
+     "Afghanistan\u00a0(AFG)": {
+          "Gold": 0,
+          "Silver": 0,
+          "Bronze": 2,
+          "Total": 2
+     },
+     "Algeria\u00a0(ALG)": {
+          "Gold": 5,
+          "Silver": 4,
+          "Bronze": 8,
+          "Total": 17
+     },
+     "Argentina\u00a0(ARG)": {
+          "Gold": 21,
+          "Silver": 26,
+          "Bronze": 30,
+          "Total": 77
+     },
+     "Armenia\u00a0(ARM)": {
+          "Gold": 2,
+          "Silver": 8,
+          "Bronze": 8,
+          "Total": 18
+     },
+     "Australasia\u00a0(ANZ)": {
+          "Gold": 3,
+          "Silver": 4,
+          "Bronze": 5,
+          "Total": 12
+     },
+     "Australia\u00a0(AUS)": {
+          "Gold": 164,
+          "Silver": 173,
+          "Bronze": 210,
+          "Total": 547
+     },
+     "Austria\u00a0(AUT)": {
+          "Gold": 20,
+          "Silver": 35,
+          "Bronze": 41,
+          "Total": 96
+     },
+     "Azerbaijan\u00a0(AZE)": {
+          "Gold": 7,
+          "Silver": 14,
+          "Bronze": 28,
+          "Total": 49
+     },
+     "Bahamas\u00a0(BAH)": {
+          "Gold": 8,
+          "Silver": 2,
+          "Bronze": 6,
+          "Total": 16
+     },
+     "Bahrain\u00a0(BRN)": {
+          "Gold": 2,
+          "Silver": 2,
+          "Bronze": 0,
+          "Total": 4
+     },
+     "Barbados\u00a0(BAR)": {
+          "Gold": 0,
+          "Silver": 0,
+          "Bronze": 1,
+          "Total": 1
+     },
+     "Belarus\u00a0(BLR)": {
+          "Gold": 13,
+          "Silver": 30,
+          "Bronze": 42,
+          "Total": 85
+     },
+     "Belgium\u00a0(BEL)": {
+          "Gold": 44,
+          "Silver": 56,
+          "Bronze": 57,
+          "Total": 157
+     },
+     "Bermuda\u00a0(BER)": {
+          "Gold": 1,
+          "Silver": 0,
+          "Bronze": 1,
+          "Total": 2
+     },
+     "Bohemia\u00a0(BOH)": {
+          "Gold": 0,
+          "Silver": 1,
+          "Bronze": 3,
+          "Total": 4
+     },
+     "Botswana\u00a0(BOT)": {
+          "Gold": 0,
+          "Silver": 1,
+          "Bronze": 1,
+          "Total": 2
+     },
+     "Brazil\u00a0(BRA)": {
+          "Gold": 37,
+          "Silver": 42,
+          "Bronze": 71,
+          "Total": 150
+     },
+     "British West Indies\u00a0(BWI)": {
+          "Gold": 0,
+          "Silver": 0,
+          "Bronze": 2,
+          "Total": 2
+     },
+     "Bulgaria\u00a0(BUL)": {
+          "Gold": 54,
+          "Silver": 88,
+          "Bronze": 82,
+          "Total": 224
+     },
+     "Burkina Faso\u00a0(BUR)": {
+          "Gold": 0,
+          "Silver": 0,
+          "Bronze": 1,
+          "Total": 1
+     },
+     "Burundi\u00a0(BDI)": {
+          "Gold": 1,
+          "Silver": 1,
+          "Bronze": 0,
+          "Total": 2
+     },
+     "Cameroon\u00a0(CMR)": {
+          "Gold": 3,
+          "Silver": 1,
+          "Bronze": 2,
+          "Total": 6
+     },
+     "Canada\u00a0(CAN)": {
+          "Gold": 71,
+          "Silver": 110,
+          "Bronze": 145,
+          "Total": 326
+     },
+     "Chile\u00a0(CHI)": {
+          "Gold": 2,
+          "Silver": 7,
+          "Bronze": 4,
+          "Total": 13
+     },
+     "China\u00a0(CHN)": {
+          "Gold": 263,
+          "Silver": 199,
+          "Bronze": 174,
+          "Total": 636
+     },
+     "Colombia\u00a0(COL)": {
+          "Gold": 5,
+          "Silver": 13,
+          "Bronze": 16,
+          "Total": 34
+     },
+     "Costa Rica\u00a0(CRC)": {
+          "Gold": 1,
+          "Silver": 1,
+          "Bronze": 2,
+          "Total": 4
+     },
+     "Ivory Coast\u00a0(CIV)": {
+          "Gold": 1,
+          "Silver": 1,
+          "Bronze": 2,
+          "Total": 4
+     },
+     "Croatia\u00a0(CRO)": {
+          "Gold": 14,
+          "Silver": 13,
+          "Bronze": 14,
+          "Total": 41
+     },
+     "Cuba\u00a0(CUB)": {
+          "Gold": 84,
+          "Silver": 69,
+          "Bronze": 82,
+          "Total": 235
+     },
+     "Cyprus\u00a0(CYP)": {
+          "Gold": 0,
+          "Silver": 1,
+          "Bronze": 0,
+          "Total": 1
+     },
+     "Czech Republic\u00a0(CZE)": {
+          "Gold": 19,
+          "Silver": 22,
+          "Bronze": 26,
+          "Total": 67
+     },
+     "Czechoslovakia\u00a0(TCH)": {
+          "Gold": 49,
+          "Silver": 49,
+          "Bronze": 45,
+          "Total": 143
+     },
+     "Denmark\u00a0(DEN)": {
+          "Gold": 48,
+          "Silver": 78,
+          "Bronze": 79,
+          "Total": 205
+     },
+     "Djibouti\u00a0(DJI)": {
+          "Gold": 0,
+          "Silver": 0,
+          "Bronze": 1,
+          "Total": 1
+     },
+     "Dominican Republic\u00a0(DOM)": {
+          "Gold": 3,
+          "Silver": 5,
+          "Bronze": 4,
+          "Total": 12
+     },
+     "Ecuador\u00a0(ECU)": {
+          "Gold": 3,
+          "Silver": 2,
+          "Bronze": 0,
+          "Total": 5
+     },
+     "Egypt\u00a0(EGY)": {
+          "Gold": 8,
+          "Silver": 11,
+          "Bronze": 19,
+          "Total": 38
+     },
+     "Eritrea\u00a0(ERI)": {
+          "Gold": 0,
+          "Silver": 0,
+          "Bronze": 1,
+          "Total": 1
+     },
+     "Estonia\u00a0(EST)": {
+          "Gold": 10,
+          "Silver": 9,
+          "Bronze": 17,
+          "Total": 36
+     },
+     "Ethiopia\u00a0(ETH)": {
+          "Gold": 23,
+          "Silver": 12,
+          "Bronze": 23,
+          "Total": 58
+     },
+     "Fiji\u00a0(FIJ)": {
+          "Gold": 2,
+          "Silver": 0,
+          "Bronze": 1,
+          "Total": 3
+     },
+     "Finland\u00a0(FIN)": {
+          "Gold": 101,
+          "Silver": 85,
+          "Bronze": 119,
+          "Total": 305
+     },
+     "France\u00a0(FRA)": {
+          "Gold": 223,
+          "Silver": 251,
+          "Bronze": 277,
+          "Total": 751
+     },
+     "Gabon\u00a0(GAB)": {
+          "Gold": 0,
+          "Silver": 1,
+          "Bronze": 0,
+          "Total": 1
+     },
+     "Georgia\u00a0(GEO)": {
+          "Gold": 10,
+          "Silver": 12,
+          "Bronze": 18,
+          "Total": 40
+     },
+     "Germany\u00a0(GER)": {
+          "Gold": 201,
+          "Silver": 207,
+          "Bronze": 247,
+          "Total": 655
+     },
+     "United Team of Germany\u00a0(EUA)": {
+          "Gold": 28,
+          "Silver": 54,
+          "Bronze": 36,
+          "Total": 118
+     },
+     "East Germany\u00a0(GDR)": {
+          "Gold": 153,
+          "Silver": 129,
+          "Bronze": 127,
+          "Total": 409
+     },
+     "West Germany\u00a0(FRG)": {
+          "Gold": 56,
+          "Silver": 67,
+          "Bronze": 81,
+          "Total": 204
+     },
+     "Ghana\u00a0(GHA)": {
+          "Gold": 0,
+          "Silver": 1,
+          "Bronze": 4,
+          "Total": 5
+     },
+     "Great Britain\u00a0(GBR)": {
+          "Gold": 284,
+          "Silver": 318,
+          "Bronze": 314,
+          "Total": 916
+     },
+     "Greece\u00a0(GRE)": {
+          "Gold": 35,
+          "Silver": 45,
+          "Bronze": 41,
+          "Total": 121
+     },
+     "Grenada\u00a0(GRN)": {
+          "Gold": 1,
+          "Silver": 1,
+          "Bronze": 1,
+          "Total": 3
+     },
+     "Guatemala\u00a0(GUA)": {
+          "Gold": 0,
+          "Silver": 1,
+          "Bronze": 0,
+          "Total": 1
+     },
+     "Guyana\u00a0(GUY)": {
+          "Gold": 0,
+          "Silver": 0,
+          "Bronze": 1,
+          "Total": 1
+     },
+     "Haiti\u00a0(HAI)": {
+          "Gold": 0,
+          "Silver": 1,
+          "Bronze": 1,
+          "Total": 2
+     },
+     "Hong Kong\u00a0(HKG)": {
+          "Gold": 2,
+          "Silver": 3,
+          "Bronze": 4,
+          "Total": 9
+     },
+     "Hungary\u00a0(HUN)": {
+          "Gold": 181,
+          "Silver": 154,
+          "Bronze": 176,
+          "Total": 511
+     },
+     "Iceland\u00a0(ISL)": {
+          "Gold": 0,
+          "Silver": 2,
+          "Bronze": 2,
+          "Total": 4
+     },
+     "India\u00a0(IND)": {
+          "Gold": 10,
+          "Silver": 9,
+          "Bronze": 16,
+          "Total": 35
+     },
+     "Indonesia\u00a0(INA)": {
+          "Gold": 8,
+          "Silver": 14,
+          "Bronze": 15,
+          "Total": 37
+     },
+     "Iran\u00a0(IRI)": {
+          "Gold": 24,
+          "Silver": 23,
+          "Bronze": 29,
+          "Total": 76
+     },
+     "Iraq\u00a0(IRQ)": {
+          "Gold": 0,
+          "Silver": 0,
+          "Bronze": 1,
+          "Total": 1
+     },
+     "Ireland\u00a0(IRL)": {
+          "Gold": 11,
+          "Silver": 10,
+          "Bronze": 14,
+          "Total": 35
+     },
+     "Israel\u00a0(ISR)": {
+          "Gold": 3,
+          "Silver": 1,
+          "Bronze": 9,
+          "Total": 13
+     },
+     "Italy\u00a0(ITA)": {
+          "Gold": 217,
+          "Silver": 188,
+          "Bronze": 213,
+          "Total": 618
+     },
+     "Jamaica\u00a0(JAM)": {
+          "Gold": 26,
+          "Silver": 36,
+          "Bronze": 26,
+          "Total": 88
+     },
+     "Japan\u00a0(JPN)": {
+          "Gold": 169,
+          "Silver": 150,
+          "Bronze": 178,
+          "Total": 497
+     },
+     "Jordan\u00a0(JOR)": {
+          "Gold": 1,
+          "Silver": 1,
+          "Bronze": 1,
+          "Total": 3
+     },
+     "Kazakhstan\u00a0(KAZ)": {
+          "Gold": 14,
+          "Silver": 22,
+          "Bronze": 35,
+          "Total": 71
+     },
+     "Kenya\u00a0(KEN)": {
+          "Gold": 35,
+          "Silver": 42,
+          "Bronze": 36,
+          "Total": 113
+     },
+     "Kosovo\u00a0(KOS)": {
+          "Gold": 3,
+          "Silver": 0,
+          "Bronze": 0,
+          "Total": 3
+     },
+     "North Korea\u00a0(PRK)": {
+          "Gold": 16,
+          "Silver": 16,
+          "Bronze": 23,
+          "Total": 55
+     },
+     "South Korea\u00a0(KOR)": {
+          "Gold": 96,
+          "Silver": 91,
+          "Bronze": 100,
+          "Total": 287
+     },
+     "Kuwait\u00a0(KUW)": {
+          "Gold": 0,
+          "Silver": 0,
+          "Bronze": 3,
+          "Total": 3
+     },
+     "Kyrgyzstan\u00a0(KGZ)": {
+          "Gold": 0,
+          "Silver": 3,
+          "Bronze": 4,
+          "Total": 7
+     },
+     "Latvia\u00a0(LAT)": {
+          "Gold": 4,
+          "Silver": 11,
+          "Bronze": 6,
+          "Total": 21
+     },
+     "Lebanon\u00a0(LBN)": {
+          "Gold": 0,
+          "Silver": 2,
+          "Bronze": 2,
+          "Total": 4
+     },
+     "Liechtenstein\u00a0(LIE)": {
+          "Gold": 0,
+          "Silver": 0,
+          "Bronze": 0,
+          "Total": 0
+     },
+     "Lithuania\u00a0(LTU)": {
+          "Gold": 6,
+          "Silver": 7,
+          "Bronze": 13,
+          "Total": 26
+     },
+     "Luxembourg\u00a0(LUX)": {
+          "Gold": 2,
+          "Silver": 1,
+          "Bronze": 0,
+          "Total": 3
+     },
+     "Malaysia\u00a0(MAS)": {
+          "Gold": 0,
+          "Silver": 8,
+          "Bronze": 5,
+          "Total": 13
+     },
+     "Mauritius\u00a0(MRI)": {
+          "Gold": 0,
+          "Silver": 0,
+          "Bronze": 1,
+          "Total": 1
+     },
+     "Mexico\u00a0(MEX)": {
+          "Gold": 13,
+          "Silver": 24,
+          "Bronze": 35,
+          "Total": 72
+     },
+     "Moldova\u00a0(MDA)": {
+          "Gold": 0,
+          "Silver": 2,
+          "Bronze": 4,
+          "Total": 6
+     },
+     "Mongolia\u00a0(MGL)": {
+          "Gold": 2,
+          "Silver": 11,
+          "Bronze": 17,
+          "Total": 30
+     },
+     "Montenegro\u00a0(MNE)": {
+          "Gold": 0,
+          "Silver": 1,
+          "Bronze": 0,
+          "Total": 1
+     },
+     "Morocco\u00a0(MAR)": {
+          "Gold": 7,
+          "Silver": 5,
+          "Bronze": 12,
+          "Total": 24
+     },
+     "Mozambique\u00a0(MOZ)": {
+          "Gold": 1,
+          "Silver": 0,
+          "Bronze": 1,
+          "Total": 2
+     },
+     "Namibia\u00a0(NAM)": {
+          "Gold": 0,
+          "Silver": 5,
+          "Bronze": 0,
+          "Total": 5
+     },
+     "Netherlands\u00a0(NED)": {
+          "Gold": 95,
+          "Silver": 105,
+          "Bronze": 122,
+          "Total": 322
+     },
+     "Netherlands Antilles\u00a0(AHO)": {
+          "Gold": 0,
+          "Silver": 1,
+          "Bronze": 0,
+          "Total": 1
+     },
+     "New Zealand\u00a0(NZL)": {
+          "Gold": 53,
+          "Silver": 33,
+          "Bronze": 51,
+          "Total": 137
+     },
+     "Niger\u00a0(NIG)": {
+          "Gold": 0,
+          "Silver": 1,
+          "Bronze": 1,
+          "Total": 2
+     },
+     "Nigeria\u00a0(NGR)": {
+          "Gold": 3,
+          "Silver": 11,
+          "Bronze": 13,
+          "Total": 27
+     },
+     "North Macedonia (MKD)": {
+          "Gold": 0,
+          "Silver": 1,
+          "Bronze": 1,
+          "Total": 2
+     },
+     "Norway\u00a0(NOR)": {
+          "Gold": 61,
+          "Silver": 52,
+          "Bronze": 50,
+          "Total": 163
+     },
+     "Pakistan\u00a0(PAK)": {
+          "Gold": 3,
+          "Silver": 3,
+          "Bronze": 4,
+          "Total": 10
+     },
+     "Panama\u00a0(PAN)": {
+          "Gold": 1,
+          "Silver": 0,
+          "Bronze": 2,
+          "Total": 3
+     },
+     "Paraguay\u00a0(PAR)": {
+          "Gold": 0,
+          "Silver": 1,
+          "Bronze": 0,
+          "Total": 1
+     },
+     "Peru\u00a0(PER)": {
+          "Gold": 1,
+          "Silver": 3,
+          "Bronze": 0,
+          "Total": 4
+     },
+     "Philippines\u00a0(PHI)": {
+          "Gold": 1,
+          "Silver": 5,
+          "Bronze": 8,
+          "Total": 14
+     },
+     "Poland\u00a0(POL)": {
+          "Gold": 72,
+          "Silver": 89,
+          "Bronze": 137,
+          "Total": 298
+     },
+     "Portugal\u00a0(POR)": {
+          "Gold": 5,
+          "Silver": 9,
+          "Bronze": 14,
+          "Total": 28
+     },
+     "Puerto Rico\u00a0(PUR)": {
+          "Gold": 2,
+          "Silver": 2,
+          "Bronze": 6,
+          "Total": 10
+     },
+     "Qatar\u00a0(QAT)": {
+          "Gold": 2,
+          "Silver": 2,
+          "Bronze": 4,
+          "Total": 8
+     },
+     "Romania\u00a0(ROU)": {
+          "Gold": 90,
+          "Silver": 97,
+          "Bronze": 121,
+          "Total": 308
+     },
+     "Russia\u00a0(RUS)": {
+          "Gold": 147,
+          "Silver": 126,
+          "Bronze": 151,
+          "Total": 424
+     },
+     "Russian Empire\u00a0(RU1)": {
+          "Gold": 1,
+          "Silver": 4,
+          "Bronze": 3,
+          "Total": 8
+     },
+     "Soviet Union\u00a0(URS)": {
+          "Gold": 395,
+          "Silver": 319,
+          "Bronze": 296,
+          "Total": 1010
+     },
+     "Unified Team\u00a0(EUN)": {
+          "Gold": 45,
+          "Silver": 38,
+          "Bronze": 29,
+          "Total": 112
+     },
+     "Olympic Athletes from Russia\u00a0(OAR)": {
+          "Gold": 0,
+          "Silver": 0,
+          "Bronze": 0,
+          "Total": 0
+     },
+     "ROC (ROC)": {
+          "Gold": 20,
+          "Silver": 28,
+          "Bronze": 23,
+          "Total": 71
+     },
+     "San Marino\u00a0(SMR)": {
+          "Gold": 0,
+          "Silver": 1,
+          "Bronze": 2,
+          "Total": 3
+     },
+     "Saudi Arabia\u00a0(KSA)": {
+          "Gold": 0,
+          "Silver": 2,
+          "Bronze": 2,
+          "Total": 4
+     },
+     "Samoa\u00a0(SAM)": {
+          "Gold": 0,
+          "Silver": 1,
+          "Bronze": 0,
+          "Total": 1
+     },
+     "Senegal\u00a0(SEN)": {
+          "Gold": 0,
+          "Silver": 1,
+          "Bronze": 0,
+          "Total": 1
+     },
+     "Serbia\u00a0(SRB)": {
+          "Gold": 6,
+          "Silver": 7,
+          "Bronze": 11,
+          "Total": 24
+     },
+     "Serbia and Montenegro\u00a0(SCG)": {
+          "Gold": 2,
+          "Silver": 4,
+          "Bronze": 3,
+          "Total": 9
+     },
+     "Singapore\u00a0(SGP)": {
+          "Gold": 1,
+          "Silver": 2,
+          "Bronze": 2,
+          "Total": 5
+     },
+     "Slovakia\u00a0(SVK)": {
+          "Gold": 10,
+          "Silver": 14,
+          "Bronze": 8,
+          "Total": 32
+     },
+     "Slovenia\u00a0(SLO)": {
+          "Gold": 8,
+          "Silver": 9,
+          "Bronze": 11,
+          "Total": 28
+     },
+     "South Africa\u00a0(RSA)": {
+          "Gold": 27,
+          "Silver": 33,
+          "Bronze": 29,
+          "Total": 89
+     },
+     "Spain\u00a0(ESP)": {
+          "Gold": 48,
+          "Silver": 72,
+          "Bronze": 49,
+          "Total": 169
+     },
+     "Sri Lanka\u00a0(SRI)": {
+          "Gold": 0,
+          "Silver": 2,
+          "Bronze": 0,
+          "Total": 2
+     },
+     "Sudan\u00a0(SUD)": {
+          "Gold": 0,
+          "Silver": 1,
+          "Bronze": 0,
+          "Total": 1
+     },
+     "Suriname\u00a0(SUR)": {
+          "Gold": 1,
+          "Silver": 0,
+          "Bronze": 1,
+          "Total": 2
+     },
+     "Sweden\u00a0(SWE)": {
+          "Gold": 147,
+          "Silver": 177,
+          "Bronze": 179,
+          "Total": 503
+     },
+     "Switzerland\u00a0(SUI)": {
+          "Gold": 53,
+          "Silver": 79,
+          "Bronze": 74,
+          "Total": 206
+     },
+     "Syria\u00a0(SYR)": {
+          "Gold": 1,
+          "Silver": 1,
+          "Bronze": 2,
+          "Total": 4
+     },
+     "Chinese Taipei\u00a0(TPE)": {
+          "Gold": 7,
+          "Silver": 11,
+          "Bronze": 18,
+          "Total": 36
+     },
+     "Tajikistan\u00a0(TJK)": {
+          "Gold": 1,
+          "Silver": 1,
+          "Bronze": 2,
+          "Total": 4
+     },
+     "Tanzania\u00a0(TAN)": {
+          "Gold": 0,
+          "Silver": 2,
+          "Bronze": 0,
+          "Total": 2
+     },
+     "Thailand\u00a0(THA)": {
+          "Gold": 10,
+          "Silver": 8,
+          "Bronze": 17,
+          "Total": 35
+     },
+     "Togo\u00a0(TOG)": {
+          "Gold": 0,
+          "Silver": 0,
+          "Bronze": 1,
+          "Total": 1
+     },
+     "Tonga\u00a0(TGA)": {
+          "Gold": 0,
+          "Silver": 1,
+          "Bronze": 0,
+          "Total": 1
+     },
+     "Trinidad and Tobago\u00a0(TTO)": {
+          "Gold": 3,
+          "Silver": 5,
+          "Bronze": 11,
+          "Total": 19
+     },
+     "Tunisia\u00a0(TUN)": {
+          "Gold": 5,
+          "Silver": 3,
+          "Bronze": 7,
+          "Total": 15
+     },
+     "Turkey\u00a0(TUR)": {
+          "Gold": 41,
+          "Silver": 26,
+          "Bronze": 36,
+          "Total": 103
+     },
+     "Turkmenistan\u00a0(TKM)": {
+          "Gold": 0,
+          "Silver": 1,
+          "Bronze": 0,
+          "Total": 1
+     },
+     "Uganda\u00a0(UGA)": {
+          "Gold": 4,
+          "Silver": 4,
+          "Bronze": 3,
+          "Total": 11
+     },
+     "Ukraine\u00a0(UKR)": {
+          "Gold": 35,
+          "Silver": 36,
+          "Bronze": 68,
+          "Total": 139
+     },
+     "United Arab Emirates\u00a0(UAE)": {
+          "Gold": 1,
+          "Silver": 0,
+          "Bronze": 1,
+          "Total": 2
+     },
+     "United States\u00a0(USA)": {
+          "Gold": 1061,
+          "Silver": 830,
+          "Bronze": 738,
+          "Total": 2629
+     },
+     "Uruguay\u00a0(URU)": {
+          "Gold": 2,
+          "Silver": 2,
+          "Bronze": 6,
+          "Total": 10
+     },
+     "Uzbekistan\u00a0(UZB)": {
+          "Gold": 10,
+          "Silver": 6,
+          "Bronze": 20,
+          "Total": 36
+     },
+     "Venezuela\u00a0(VEN)": {
+          "Gold": 3,
+          "Silver": 7,
+          "Bronze": 9,
+          "Total": 19
+     },
+     "Vietnam\u00a0(VIE)": {
+          "Gold": 1,
+          "Silver": 3,
+          "Bronze": 1,
+          "Total": 5
+     },
+     "Virgin Islands\u00a0(ISV)": {
+          "Gold": 0,
+          "Silver": 1,
+          "Bronze": 0,
+          "Total": 1
+     },
+     "Yugoslavia\u00a0(YUG)": {
+          "Gold": 26,
+          "Silver": 29,
+          "Bronze": 28,
+          "Total": 83
+     },
+     "Zambia\u00a0(ZAM)": {
+          "Gold": 0,
+          "Silver": 1,
+          "Bronze": 1,
+          "Total": 2
+     },
+     "Zimbabwe\u00a0(ZIM)": {
+          "Gold": 3,
+          "Silver": 4,
+          "Bronze": 1,
+          "Total": 8
+     },
+     "Independent Olympic Athletes\u00a0(IOA)": {
+          "Gold": 1,
+          "Silver": 0,
+          "Bronze": 1,
+          "Total": 2
+     },
+     "Independent Olympic Participants\u00a0(IOP)": {
+          "Gold": 0,
+          "Silver": 1,
+          "Bronze": 2,
+          "Total": 3
+     },
+     "Mixed team\u00a0(ZZX)": {
+          "Gold": 11,
+          "Silver": 6,
+          "Bronze": 8,
+          "Total": 25
+     }
+}
