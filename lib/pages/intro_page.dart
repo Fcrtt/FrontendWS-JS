@@ -113,6 +113,15 @@ class mapPage extends State<IntroPage> {
       const Model('Senegal','Gold : 0\nSilver : 1\nBronze : 0\nTotal : 1'),
       const Model('Serbia','Gold : 6\nSilver : 7\nBronze : 11\nTotal : 24'),
       const Model('Slovakia','Gold : 10\nSilver : 14\nBronze : 8\nTotal : 32'),
+      const Model('Slovenia','Gold : 8\nSilver : 9\nBronze : 11\nTotal : 28'),
+      const Model('South Africa','Gold : 27\nSilver : 33\nBronze : 29\nTotal : 89'),
+      const Model('Spain','Gold : 48\nSilver : 72\nBronze : 49\nTotal : 169'),
+      const Model('Sri Lanka','Gold : 0\nSilver : 2\nBronze : 0\nTotal : 2'),
+      const Model('Sudan','Gold : 0\nSilver : 1\nBronze : 0\nTotal : 1'),
+      const Model('Suriname','Gold : 1\nSilver : 0\nBronze : 1\nTotal : 2'),
+      const Model('Sweden','Gold : 147\nSilver : 177\nBronze : 179\nTotal : 503'),
+      const Model('Switzerland','Gold : 53\nSilver : 79\nBronze : 74\nTotal : 206'),
+      const Model('Syria','Gold : 1\nSilver : 1\nBronze : 2\nTotal : 4'),
 
 
     ];
@@ -179,9 +188,9 @@ class mapPage extends State<IntroPage> {
                                     ],
                                   ),
                                   const Divider(
-                                    color: Colors.white,
+                                    color: Color(0xFFD34E24),
                                     height: 10,
-                                    thickness: 1.2,
+                                    thickness: 0.5,
                                   ),
                                   Text(
                                     _data[index].palmares,
