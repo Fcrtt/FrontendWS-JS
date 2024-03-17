@@ -122,6 +122,12 @@ class mapPage extends State<IntroPage> {
       const Model('Sweden','Gold : 147\nSilver : 177\nBronze : 179\nTotal : 503'),
       const Model('Switzerland','Gold : 53\nSilver : 79\nBronze : 74\nTotal : 206'),
       const Model('Syria','Gold : 1\nSilver : 1\nBronze : 2\nTotal : 4'),
+      const Model('Tajikistan','Gold : 1\nSilver : 1\nBronze : 2\nTotal : 4'),
+      const Model('Tanzania','Gold : 0\nSilver : 2\nBronze : 0\nTotal : 2'),
+      const Model('Thailand','Gold : 10\nSilver : 8\nBronze : 17\nTotal : 35'),
+      const Model('Togo','Gold : 0\nSilver : 0\nBronze : 1\nTotal : 1'),
+      const Model('Tonga','Gold : 0\nSilver : 1\nBronze : 0\nTotal : 1'),
+
 
 
     ];
