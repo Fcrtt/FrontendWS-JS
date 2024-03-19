@@ -5,13 +5,15 @@ import 'package:fl_chart/fl_chart.dart';
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
+  @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("HOMEPAGE"),),
+      appBar: AppBar(title: const Text("HOMEPAGE"),),
       body: Center(
         child: MyLineChart(),
       ),
@@ -25,8 +27,8 @@ class MyLineChart extends StatelessWidget {
   Widget build(BuildContext context) {
     return LineChart(
       LineChartData(
-        gridData: FlGridData(show: false),
-        titlesData: FlTitlesData(show: false),
+        gridData: const FlGridData(show: false),
+        titlesData: const FlTitlesData(show: false),
         borderData: FlBorderData(
           show: true,
           border: Border.all(color: const Color(0xff37434d), width: 1),
