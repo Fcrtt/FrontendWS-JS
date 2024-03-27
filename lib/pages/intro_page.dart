@@ -1,8 +1,21 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:syncfusion_flutter_maps/maps.dart';
 import 'package:flutter_svg/svg.dart';
+
+
+import 'package:syncfusion_flutter_sliders/sliders.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:intl/intl.dart';
+
+
+
+
+
+const Color violet = Color(0xFF4A2545);
+const Color beige = Color(0xFFDCCCA3);
 
 class IntroPage extends StatefulWidget {
   @override
@@ -155,22 +168,21 @@ class mapPage extends State<IntroPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: const Color(0xFF4A2545),
-        child: Row(
-          children: [
-            Expanded(
-              flex: 2,
-              child: Padding(
-                //margin: const EdgeInsets.all(20.0),
-                padding: const EdgeInsets.all(10.0),
-                child: PhysicalModel(
-                  color: const Color(0xFFDCCCA3),
-                  borderRadius: BorderRadius.circular(20.0), // Rayon des coins
-                  elevation: 8,
-                  child: Container(
-                    margin: const EdgeInsets.all(20.0),
-                    padding: const EdgeInsets.all(10.0),
-                    child: SfMaps(
+      color: const Color(0xFF4A2545), // Couleur de fond globale
+      child: Column( // Utilisation d'une Column pour disposer les widgets verticalement
+        children: [
+        SearchSection(), // appel de la classe SearchSection
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: PhysicalModel(
+                color: const Color(0xFFDCCCA3),
+                borderRadius: BorderRadius.circular(20.0), // Rayon des coins
+                elevation: 8,
+                child: Container(
+                  margin: const EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.all(10.0),
+                  child: SfMaps(
                       layers: [
                         MapShapeLayer(
                           source: _shapeSource,
@@ -197,7 +209,7 @@ class mapPage extends State<IntroPage> {
                                                   .fontSize),
                                         ),
                                       ),
-                                      const Icon(
+                                      const Icon(  // Icon de sifflet dans le tooltip
                                         Icons.sports,
                                         color: Color(0xFFD34E24),
                                         size: 16,
@@ -209,7 +221,7 @@ class mapPage extends State<IntroPage> {
                                     height: 10,
                                     thickness: 0.5,
                                   ),
-                                  Text(
+                                  Text(     // texte gold medal ect
                                     _data[index].palmares,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
@@ -236,56 +248,152 @@ class mapPage extends State<IntroPage> {
                 ),
               ),
             ),
-            Expanded(
-              flex: 1,
-              child: Padding(
-                padding: const EdgeInsets.all(10),
-                child: PhysicalModel(
-                  color: const Color(0xFFDCCCA3),
-                  borderRadius: BorderRadius.circular(20.0), // Rayon des coins
-                  elevation: 8,
-                  child: Container(
-                    margin: const EdgeInsets.all(10.0),
-                    padding: const EdgeInsets.all(5.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        Expanded(
-                          child: Padding(
-                            padding: const EdgeInsets.all(5),
-                            child: PhysicalModel(
-                              color: const Color(0xFF4A2545),
-                              borderRadius: BorderRadius.circular(20.0),
-                              elevation: 8,
-                              child: const Center(),
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: Padding(
-                            padding: const EdgeInsets.all(5),
-                            child: PhysicalModel(
-                              color: const Color(0xFF4A2545),
-                              borderRadius: BorderRadius.circular(20.0),
-                              elevation: 8,
-                              child: const Center(),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ),
           ],
         ));
   }
 }
+
+
 
 class Model {
   const Model(this.country, this.palmares);
 
   final String country;
   final String palmares;
+}
+
+class SearchSection extends StatefulWidget {
+  @override
+  _SearchSectionState createState() => _SearchSectionState();
+}
+
+class _SearchSectionState extends State<SearchSection> {
+  SfRangeValues _yearValues = SfRangeValues(DateTime(1896), DateTime(2024));
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Colors.grey[200],
+      borderRadius: BorderRadius.circular(20.0),
+
+      child: Padding(
+        padding: EdgeInsets.fromLTRB(10, 25, 10, 25),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    padding: EdgeInsets.only(left: 5),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(30),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Colors.grey,
+                          blurRadius: 4,
+                          offset: Offset(1, 5), // changes position of shadow
+                        ),
+                      ],
+                    ),
+                    child: const TextField(
+                      decoration: InputDecoration(
+                        contentPadding: EdgeInsets.all(10),
+                        border: InputBorder.none,
+                        hintText: "Enter a country...",
+                        prefixIcon: Icon(Icons.search),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(width: 10),
+                Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    color: Colors.green,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey,
+                        blurRadius: 4,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(25), // Faire un rond
+                    ),
+                  ),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: const Icon(Icons.search, size: 26),
+                    style: ElevatedButton.styleFrom(
+                      shape: CircleBorder(),
+                      padding: EdgeInsets.all(10),
+                      backgroundColor: Colors.green,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 50),
+            Container(
+              padding: EdgeInsets.only(left: 5),
+              child: Text(
+                "Select a year range",
+                style: GoogleFonts.nunito(
+                  fontSize: 22,
+                  color: Colors.grey[800],
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
+            ),
+            //
+            _yearRangeSlider(),
+          ],
+        ),
+      ),
+    );
+  }
+
+
+  Widget _yearRangeSlider() {
+    return SfRangeSliderTheme(
+      data: SfRangeSliderThemeData(tooltipBackgroundColor: Colors.blue),
+      child: SfRangeSlider(
+        min: DateTime(1896),
+        max: DateTime(2024),
+        showLabels: true,
+        interval: 4,
+        dateFormat: DateFormat.y(),
+        labelPlacement: LabelPlacement.onTicks,
+        dateIntervalType: DateIntervalType.years,
+        showTicks: true,
+        values: _yearValues,
+        onChanged: (SfRangeValues values) {
+          setState(() {
+            _yearValues = values;
+          });
+        },
+        enableTooltip: true,
+        tooltipTextFormatterCallback: (dynamic actualLabel, String formattedText) {
+          return DateFormat.y().format(actualLabel);
+        },
+      ),
+    );
+  }
+}
+
+
+// j'ai pas reussi à l'integrer dans le code ... je vouais juste mettre un titre à la page
+class Titre extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Olympic Games Explorer'),
+        backgroundColor: const Color(0xFF4A2545),
+      ),
+    );
+  }
 }
