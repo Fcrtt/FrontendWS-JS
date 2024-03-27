@@ -1,6 +1,9 @@
+//ignore_for_file: prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 import 'package:dashboard/pages/intro_page.dart';
 import 'package:dashboard/pages/home_page.dart';
+
 
 void main() {
   runApp(const MyApp());
