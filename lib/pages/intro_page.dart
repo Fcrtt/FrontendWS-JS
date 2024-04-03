@@ -20,6 +20,9 @@ class mapPage extends State<IntroPage> {
   late MapShapeSource _shapeSource;
   late MapZoomPanBehavior _zoomPanBehavior;
   late List<Model> _data;
+  late List<Edition2012> _data2012;
+  late List<Edition2016> _data2016;
+  late List<Edition2020> _data2020;
   late sliders.SfRangeValues _yearValues;
   late List<ChartData> _chartData;
 
@@ -27,94 +30,69 @@ class mapPage extends State<IntroPage> {
   @override
   void initState() {
     _data = <Model>[
-      const Model('United States',
-          'Gold : 1061\nSilver : 830\nBronze : 738\nTotal : 2629'),
+      const Model('United States', 'Gold : 1061\nSilver : 830\nBronze : 738\nTotal : 2629'),
       const Model('Afghanistan', 'Gold : 0\nSilver : 0\nBronze : 2\nTotal : 2'),
       const Model('Algeria', 'Gold : 5\nSilver : 4\nBronze : 8\nTotal : 17'),
-      const Model(
-          'Argentina', 'Gold : 21\nSilver : 26\nBronze : 30\nTotal : 77'),
+      const Model('Argentina', 'Gold : 21\nSilver : 26\nBronze : 30\nTotal : 77'),
       const Model('Armenia', 'Gold : 2\nSilver : 8\nBronze : 8\nTotal : 18'),
-      const Model(
-          'Australia', 'Gold : 164\nSilver : 173\nBronze : 210\nTotal : 547'),
+      const Model('Australia', 'Gold : 164\nSilver : 173\nBronze : 210\nTotal : 547'),
       const Model('Austria', 'Gold : 20\nSilver : 35\nBronze : 41\nTotal : 96'),
-      const Model(
-          'Azerbaijan', 'Gold : 7\nSilver : 14\nBronze : 28\nTotal : 49'),
+      const Model('Azerbaijan', 'Gold : 7\nSilver : 14\nBronze : 28\nTotal : 49'),
       const Model('Bahamas', 'Gold : 8\nSilver : 2\nBronze : 6\nTotal : 16'),
       const Model('Belarus', 'Gold : 13\nSilver : 30\nBronze : 42\nTotal : 85'),
-      const Model(
-          'Belgium', 'Gold : 44\nSilver : 56\nBronze : 57\nTotal : 157'),
+      const Model('Belgium', 'Gold : 44\nSilver : 56\nBronze : 57\nTotal : 157'),
       const Model('Botswana', 'Gold : 0\nSilver : 1\nBronze : 1\nTotal : 2'),
       const Model('Brazil', 'Gold : 37\nSilver : 42\nBronze : 71\nTotal : 150'),
-      const Model(
-          'Bulgaria', 'Gold : 54\nSilver : 88\nBronze : 82\nTotal : 224'),
-      const Model(
-          'Burkina Faso', 'Gold : 0\nSilver : 0\nBronze : 1\nTotal : 1'),
+      const Model('Bulgaria', 'Gold : 54\nSilver : 88\nBronze : 82\nTotal : 224'),
+      const Model('Burkina Faso', 'Gold : 0\nSilver : 0\nBronze : 1\nTotal : 1'),
       const Model('Burundi', 'Gold : 1\nSilver : 1\nBronze : 1\nTotal : 1'),
       const Model('Cameroon', 'Gold : 3\nSilver : 1\nBronze : 2\nTotal : 6'),
-      const Model(
-          'Canada', 'Gold : 71\nSilver : 110\nBronze : 145\nTotal : 326'),
+      const Model('Canada', 'Gold : 71\nSilver : 110\nBronze : 145\nTotal : 326'),
       const Model('Chile', 'Gold : 2\nSilver : 7\nBronze : 4\nTotal : 13'),
-      const Model(
-          'China', 'Gold : 263\nSilver : 199\nBronze : 174\nTotal : 636'),
-      const Model(
-          'Colombia', 'Gold : 5 \nSilver : 13\nBronze : 16\nTotal : 34'),
+      const Model('China', 'Gold : 263\nSilver : 199\nBronze : 174\nTotal : 636'),
+      const Model('Colombia', 'Gold : 5 \nSilver : 13\nBronze : 16\nTotal : 34'),
       const Model('Costa Rica', 'Gold : 1\nSilver : 1\nBronze : 2\nTotal : 4'),
       const Model('Ivory Coast', 'Gold : 1\nSilver : 1\nBronze : 2\nTotal : 4'),
       const Model('Croatia', 'Gold : 14\nSilver : 13\nBronze : 14\nTotal : 41'),
       const Model('Cuba', 'Gold : 0\nSilver : 1\nBronze : 0\nTotal : 1'),
       const Model('Cyprus', 'Gold : 0\nSilver : 1\nBronze : 0\nTotal : 1'),
-      const Model(
-          'Czech Republic', 'Gold : 19\nSilver : 22\nBronze : 26\nTotal : 67'),
-      const Model(
-          'Denmark', 'Gold : 48\nSilver : 78\nBronze : 79\nTotal : 205'),
+      const Model('Czech Republic', 'Gold : 19\nSilver : 22\nBronze : 26\nTotal : 67'),
+      const Model('Denmark', 'Gold : 48\nSilver : 78\nBronze : 79\nTotal : 205'),
       const Model('Djibouti', 'Gold : 0\nSilver : 0\nBronze : 1\nTotal : 1'),
-      const Model(
-          'Dominican Republic', 'Gold : 3\nSilver : 5\nBronze : 4\nTotal : 12'),
+      const Model('Dominican Republic', 'Gold : 3\nSilver : 5\nBronze : 4\nTotal : 12'),
       const Model('Ecuador', 'Gold : 3\nSilver : 2\nBronze : 0\nTotal : 5'),
       const Model('Egypt', 'Gold : 8\nSilver : 11\nBronze : 19\nTotal : 38'),
       const Model('Eritrea', 'Gold : 0\nSilver : 0\nBronze : 1\nTotal : 1'),
-      const Model(
-          'Ethiopia', 'Gold : 23\nSilver : 12\nBronze : 23\nTotal : 58'),
+      const Model('Ethiopia', 'Gold : 23\nSilver : 12\nBronze : 23\nTotal : 58'),
       const Model('Fiji', 'Gold : 2\nSilver : 0\nBronze : 1\nTotal : 3'),
-      const Model(
-          'Finland', 'Gold : 101\nSilver : 85\nBronze : 119\nTotal : 305'),
-      const Model(
-          'France', 'Gold : 223\nSilver : 251\nBronze : 277\nTotal : 751'),
+      const Model('Finland', 'Gold : 101\nSilver : 85\nBronze : 119\nTotal : 305'),
+      const Model('France', 'Gold : 223\nSilver : 251\nBronze : 277\nTotal : 751'),
       const Model('Gabon', 'Gold : 0\nSilver : 1\nBronze : 0\nTotal : 1'),
       const Model('Georgia', 'Gold : 10\nSilver : 12\nBronze : 18\nTotal : 40'),
-      const Model(
-          'Germany', 'Gold : 201\nSilver : 207\nBronze : 247\nTotal : 655'),
+      const Model('Germany', 'Gold : 201\nSilver : 207\nBronze : 247\nTotal : 655'),
       const Model('Ghana', 'Gold : 0\nSilver : 1\nBronze : 4\nTotal : 5'),
-      const Model('United Kingdom',
-          'Gold : 284\nSilver : 318\nBronze : 314\nTotal : 916'),
+      const Model('United Kingdom', 'Gold : 284\nSilver : 318\nBronze : 314\nTotal : 916'),
       const Model('Greece', 'Gold : 35\nSilver : 45\nBronze : 41\nTotal : 121'),
       const Model('Guatemala', 'Gold : 0\nSilver : 1\nBronze : 0\nTotal : 1'),
       const Model('Guyana', 'Gold : 0\nSilver : 0\nBronze : 1\nTotal : 1'),
       const Model('Haiti', 'Gold : 0\nSilver : 1\nBronze : 1\nTotal : 2'),
-      const Model(
-          'Hungary', 'Gold : 181\nSilver : 154\nBronze : 176\nTotal : 511'),
+      const Model('Hungary', 'Gold : 181\nSilver : 154\nBronze : 176\nTotal : 511'),
       const Model('Iceland', 'Gold : 0\nSilver : 2\nBronze : 2\nTotal : 4'),
       const Model('India', 'Gold : 10\nSilver : 9\nBronze : 16\nTotal : 35'),
-      const Model(
-          'Indonesia', 'Gold : 8\nSilver : 14\nBronze : 15\nTotal : 37'),
+      const Model('Indonesia', 'Gold : 8\nSilver : 14\nBronze : 15\nTotal : 37'),
       const Model('Iran', 'Gold : 24\nSilver : 23\nBronze : 29\nTotal : 76'),
       const Model('Iraq', 'Gold : 0\nSilver : 0\nBronze : 1\nTotal : 1'),
       const Model('Ireland', 'Gold : 11\nSilver : 10\nBronze : 14\nTotal : 35'),
       const Model('Israel', 'Gold : 3\nSilver : 1\nBronze : 9\nTotal : 13'),
-      const Model(
-          'Italy', 'Gold : 217\nSilver : 188\nBronze : 213\nTotal : 618'),
+      const Model('Italy', 'Gold : 217\nSilver : 188\nBronze : 213\nTotal : 618'),
       const Model('Jamaica', 'Gold : 26\nSilver : 36\nBronze : 26\nTotal : 88'),
-      const Model(
-          'Japan', 'Gold : 169\nSilver : 150\nBronze : 178\nTotal : 497'),
+      const Model('Japan', 'Gold : 169\nSilver : 150\nBronze : 178\nTotal : 497'),
       const Model('Jordan', 'Gold : 1\nSilver : 1\nBronze : 1\nTotal : 3'),
-      const Model(
-          'Kazakhstan', 'Gold : 14\nSilver : 22\nBronze : 35\nTotal : 71'),
+      const Model('Kazakhstan', 'Gold : 14\nSilver : 22\nBronze : 35\nTotal : 71'),
       const Model('Kenya', 'Gold : 35\nSilver : 42\nBronze : 36\nTotal : 113'),
       const Model('Kosovo', 'Gold : 3\nSilver : 0\nBronze : 0\nTotal : 3'),
-      const Model(
-          'North Korea', 'Gold : 16\nSilver : 16\nBronze : 23\nTotal : 55'),
-      const Model(
-          'South Korea', 'Gold : 96\nSilver : 91\nBronze : 100\nTotal : 287'),
+      const Model('North Korea', 'Gold : 16\nSilver : 16\nBronze : 23\nTotal : 55'),
+      const Model('South Korea', 'Gold : 96\nSilver : 91\nBronze : 100\nTotal : 287'),
       const Model('Kuwait', 'Gold : 0\nSilver : 0\nBronze : 3\nTotal : 3'),
       const Model('Kyrgyzstan', 'Gold : 0\nSilver : 3\nBronze : 4\nTotal : 7'),
       const Model('Latvia', 'Gold : 4\nSilver : 11\nBronze : 6\nTotal : 21'),
@@ -129,10 +107,8 @@ class mapPage extends State<IntroPage> {
       const Model('Morocco', 'Gold : 7\nSilver : 5\nBronze : 12\nTotal : 24'),
       const Model('Mozambique', 'Gold : 1\nSilver : 0\nBronze : 1\nTotal : 2'),
       const Model('Namibia', 'Gold : 0\nSilver : 5\nBronze : 0\nTotal : 5'),
-      const Model(
-          'Netherlands', 'Gold : 95\nSilver : 105\nBronze : 122\nTotal : 322'),
-      const Model(
-          'New Zealand', 'Gold : 53\nSilver : 33\nBronze : 51\nTotal : 137'),
+      const Model('Netherlands', 'Gold : 95\nSilver : 105\nBronze : 122\nTotal : 322'),
+      const Model('New Zealand', 'Gold : 53\nSilver : 33\nBronze : 51\nTotal : 137'),
       const Model('Niger', 'Gold : 0\nSilver : 1\nBronze : 1\nTotal : 2'),
       const Model('Nigeria', 'Gold : 3\nSilver : 11\nBronze : 13\nTotal : 27'),
       const Model('Norway', 'Gold : 61\nSilver : 52\nBronze : 50\nTotal : 163'),
@@ -140,58 +116,236 @@ class mapPage extends State<IntroPage> {
       const Model('Panama', 'Gold : 1\nSilver : 0\nBronze : 2\nTotal : 3'),
       const Model('Paraguay', 'Gold : 0\nSilver : 1\nBronze : 0\nTotal : 1'),
       const Model('Peru', 'Gold : 1\nSilver : 3\nBronze : 0\nTotal : 4'),
-      const Model(
-          'Philippines', 'Gold : 1\nSilver : 5\nBronze : 8\nTotal : 14'),
-      const Model(
-          'Poland', 'Gold : 72\nSilver : 89\nBronze : 137\nTotal : 298'),
+      const Model('Philippines', 'Gold : 1\nSilver : 5\nBronze : 8\nTotal : 14'),
+      const Model('Poland', 'Gold : 72\nSilver : 89\nBronze : 137\nTotal : 298'),
       const Model('Portugal', 'Gold : 5\nSilver : 9\nBronze : 14\nTotal : 28'),
-      const Model(
-          'Puerto Rico', 'Gold : 2\nSilver : 2\nBronze : 6\nTotal : 10'),
+      const Model('Puerto Rico', 'Gold : 2\nSilver : 2\nBronze : 6\nTotal : 10'),
       const Model('Qatar', 'Gold : 2\nSilver : 2\nBronze : 4\nTotal : 8'),
-      const Model(
-          'Romania', 'Gold : 90\nSilver : 97\nBronze : 121\nTotal : 308'),
-      const Model(
-          'Russia', 'Gold : 147\nSilver : 126\nBronze : 151\nTotal : 424'),
-      const Model(
-          'Saudi Arabia', 'Gold : 0\nSilver : 2\nBronze : 2\nTotal : 4'),
+      const Model('Romania', 'Gold : 90\nSilver : 97\nBronze : 121\nTotal : 308'),
+      const Model('Russia', 'Gold : 147\nSilver : 126\nBronze : 151\nTotal : 424'),
+      const Model('Saudi Arabia', 'Gold : 0\nSilver : 2\nBronze : 2\nTotal : 4'),
       const Model('Senegal', 'Gold : 0\nSilver : 1\nBronze : 0\nTotal : 1'),
       const Model('Serbia', 'Gold : 6\nSilver : 7\nBronze : 11\nTotal : 24'),
       const Model('Slovakia', 'Gold : 10\nSilver : 14\nBronze : 8\nTotal : 32'),
       const Model('Slovenia', 'Gold : 8\nSilver : 9\nBronze : 11\nTotal : 28'),
-      const Model(
-          'South Africa', 'Gold : 27\nSilver : 33\nBronze : 29\nTotal : 89'),
+      const Model('South Africa', 'Gold : 27\nSilver : 33\nBronze : 29\nTotal : 89'),
       const Model('Spain', 'Gold : 48\nSilver : 72\nBronze : 49\nTotal : 169'),
       const Model('Sri Lanka', 'Gold : 0\nSilver : 2\nBronze : 0\nTotal : 2'),
       const Model('Sudan', 'Gold : 0\nSilver : 1\nBronze : 0\nTotal : 1'),
       const Model('Suriname', 'Gold : 1\nSilver : 0\nBronze : 1\nTotal : 2'),
-      const Model(
-          'Sweden', 'Gold : 147\nSilver : 177\nBronze : 179\nTotal : 503'),
-      const Model(
-          'Switzerland', 'Gold : 53\nSilver : 79\nBronze : 74\nTotal : 206'),
+      const Model('Sweden', 'Gold : 147\nSilver : 177\nBronze : 179\nTotal : 503'),
+      const Model('Switzerland', 'Gold : 53\nSilver : 79\nBronze : 74\nTotal : 206'),
       const Model('Syria', 'Gold : 1\nSilver : 1\nBronze : 2\nTotal : 4'),
       const Model('Tajikistan', 'Gold : 1\nSilver : 1\nBronze : 2\nTotal : 4'),
       const Model('Tanzania', 'Gold : 0\nSilver : 2\nBronze : 0\nTotal : 2'),
       const Model('Thailand', 'Gold : 10\nSilver : 8\nBronze : 17\nTotal : 35'),
       const Model('Togo', 'Gold : 0\nSilver : 0\nBronze : 1\nTotal : 1'),
       const Model('Tonga', 'Gold : 0\nSilver : 1\nBronze : 0\nTotal : 1'),
-      const Model('Trinidad and Tobago',
-          'Gold : 3\nSilver : 5\nBronze : 11\nTotal : 19'),
+      const Model('Trinidad and Tobago', 'Gold : 3\nSilver : 5\nBronze : 11\nTotal : 19'),
       const Model('Tunisia', 'Gold : 5\nSilver : 3\nBronze : 7\nTotal : 15'),
       const Model('Turkey', 'Gold : 41\nSilver : 26\nBronze : 36\nTotal : 103'),
-      const Model(
-          'Turkmenistan', 'Gold : 0\nSilver : 1\nBronze : 0\nTotal : 1'),
+      const Model('Turkmenistan', 'Gold : 0\nSilver : 1\nBronze : 0\nTotal : 1'),
       const Model('Uganda', 'Gold : 4\nSilver : 4\nBronze : 3\nTotal : 11'),
-      const Model(
-          'Ukraine', 'Gold : 35\nSilver : 36\nBronze : 68\nTotal : 139'),
-      const Model('United Arab Emirates',
-          'Gold : 1\nSilver : 0\nBronze : 1\nTotal : 2'),
+      const Model('Ukraine', 'Gold : 35\nSilver : 36\nBronze : 68\nTotal : 139'),
+      const Model('United Arab Emirates', 'Gold : 1\nSilver : 0\nBronze : 1\nTotal : 2'),
       const Model('Uruguay', 'Gold : 2\nSilver : 2\nBronze : 6\nTotal : 10'),
-      const Model(
-          'Uzbekistan', 'Gold : 10\nSilver : 6\nBronze : 20\nTotal : 36'),
+      const Model('Uzbekistan', 'Gold : 10\nSilver : 6\nBronze : 20\nTotal : 36'),
       const Model('Venezuela', 'Gold : 3\nSilver : 7\nBronze : 9\nTotal : 19'),
       const Model('Vietnam', 'Gold : 1\nSilver : 3\nBronze : 1\nTotal : 5'),
       const Model('Zambia', 'Gold : 0\nSilver : 1\nBronze : 1\nTotal : 2'),
       const Model('Zimbabwe', 'Gold : 3\nSilver : 4\nBronze : 1\nTotal : 8'),
+    ];
+    _data2012 = <Edition2012>[
+      const Edition2012('United States', 'Gold : 48\nSilver : 26\nBronze : 30\nTotal : 104'),
+      const Edition2012('China', 'Gold : 39\nSilver : 31\nBronze : 22\nTotal : 92'),
+      const Edition2012('Great Britain*', 'Gold : 29\nSilver : 18\nBronze : 18\nTotal : 65'),
+      const Edition2012('Russia', 'Gold : 18\nSilver : 21\nBronze : 26\nTotal : 65'),
+      const Edition2012('South Korea', 'Gold : 13\nSilver : 9\nBronze : 9\nTotal : 31'),
+      const Edition2012('Germany', 'Gold : 11\nSilver : 20\nBronze : 13\nTotal : 44'),
+      const Edition2012('France', 'Gold : 11\nSilver : 11\nBronze : 13\nTotal : 35'),
+      const Edition2012('Australia', 'Gold : 8\nSilver : 15\nBronze : 12\nTotal : 35'),
+      const Edition2012('Italy', 'Gold : 8\nSilver : 9\nBronze : 11\nTotal : 28'),
+      const Edition2012('Hungary', 'Gold : 8\nSilver : 4\nBronze : 6\nTotal : 18'),
+      const Edition2012('Japan', 'Gold : 7\nSilver : 14\nBronze : 17\nTotal : 38'),
+      const Edition2012('Iran', 'Gold : 7\nSilver : 5\nBronze : 1\nTotal : 13'),
+      const Edition2012('Netherlands', 'Gold : 6\nSilver : 6\nBronze : 8\nTotal : 20'),
+      const Edition2012('New Zealand', 'Gold : 6\nSilver : 2\nBronze : 5\nTotal : 13'),
+      const Edition2012('Ukraine', 'Gold : 5\nSilver : 4\nBronze : 10\nTotal : 19'),
+      const Edition2012('Cuba', 'Gold : 5\nSilver : 3\nBronze : 7\nTotal : 15'),
+      const Edition2012('Spain', 'Gold : 4\nSilver : 10\nBronze : 6\nTotal : 20'),
+      const Edition2012('Jamaica', 'Gold : 4\nSilver : 5\nBronze : 4\nTotal : 13'),
+      const Edition2012('Czech Republic', 'Gold : 4\nSilver : 4\nBronze : 3\nTotal : 11'),
+      const Edition2012('South Africa', 'Gold : 4\nSilver : 1\nBronze : 1\nTotal : 6'),
+      const Edition2012('North Korea', 'Gold : 4\nSilver : 0\nBronze : 3\nTotal : 7'),
+      const Edition2012('Brazil', 'Gold : 3\nSilver : 5\nBronze : 9\nTotal : 17'),
+      const Edition2012('Kazakhstan', 'Gold : 3\nSilver : 2\nBronze : 6\nTotal : 11'),
+      const Edition2012('Ethiopia', 'Gold : 3\nSilver : 2\nBronze : 3\nTotal : 8'),
+      const Edition2012('Croatia', 'Gold : 3\nSilver : 1\nBronze : 2\nTotal : 6'),
+      const Edition2012('Canada', 'Gold : 2\nSilver : 6\nBronze : 10\nTotal : 18'),
+      const Edition2012('Belarus', 'Gold : 2\nSilver : 5\nBronze : 3\nTotal : 10'),
+      const Edition2012('Kenya', 'Gold : 2\nSilver : 4\nBronze : 7\nTotal : 13'),
+      const Edition2012('Denmark', 'Gold : 2\nSilver : 4\nBronze : 3\nTotal : 9'),
+      const Edition2012('Romania', 'Gold : 2\nSilver : 4\nBronze : 1\nTotal : 7'),
+      const Edition2012('Azerbaijan', 'Gold : 2\nSilver : 2\nBronze : 5\nTotal : 9'),
+      const Edition2012('Switzerland', 'Gold : 2\nSilver : 2\nBronze : 0\nTotal : 4'),
+      const Edition2012('Norway', 'Gold : 2\nSilver : 1\nBronze : 1\nTotal : 4'),
+      const Edition2012('Lithuania', 'Gold : 2\nSilver : 0\nBronze : 3\nTotal : 5'),
+      const Edition2012('Tunisia', 'Gold : 2\nSilver : 0\nBronze : 1\nTotal : 3'),
+      const Edition2012('Sweden', 'Gold : 1\nSilver : 4\nBronze : 3\nTotal : 8'),
+      const Edition2012('Colombia', 'Gold : 1\nSilver : 3\nBronze : 5\nTotal : 9'),
+      const Edition2012('Mexico', 'Gold : 1\nSilver : 3\nBronze : 4\nTotal : 8'),
+      const Edition2012('Georgia', 'Gold : 1\nSilver : 2\nBronze : 3\nTotal : 6'),
+      const Edition2012('Ireland', 'Gold : 1\nSilver : 1\nBronze : 4\nTotal : 6'),
+      const Edition2012('Argentina', 'Gold : 1\nSilver : 1\nBronze : 2\nTotal : 4'),
+      const Edition2012('Turkey', 'Gold : 1\nSilver : 1\nBronze : 1\nTotal : 3'),
+      const Edition2012('Dominican Republic', 'Gold : 1\nSilver : 1\nBronze : 0\nTotal : 2'),
+      const Edition2012('Chinese Taipei', 'Gold : 1\nSilver : 0\nBronze : 1\nTotal : 2'),
+      const Edition2012('Algeria', 'Gold : 1\nSilver : 0\nBronze : 0\nTotal : 1'),
+      const Edition2012('Egypt', 'Gold : 0\nSilver : 3\nBronze : 1\nTotal : 4'),
+      const Edition2012('India', 'Gold : 0\nSilver : 2\nBronze : 4\nTotal : 6'),
+      const Edition2012('Mongolia', 'Gold : 0\nSilver : 2\nBronze : 3\nTotal : 5'),
+      const Edition2012('Thailand', 'Gold : 0\nSilver : 2\nBronze : 2\nTotal : 4'),
+      const Edition2012('Bulgaria', 'Gold : 0\nSilver : 2\nBronze : 1\nTotal : 3'),
+      const Edition2012('Slovakia', 'Gold : 0\nSilver : 1\nBronze : 3\nTotal : 4'),
+      const Edition2012('Belgium', 'Gold : 0\nSilver : 1\nBronze : 2\nTotal : 3'),
+      const Edition2012('Armenia', 'Gold : 0\nSilver : 1\nBronze : 1\nTotal : 2'),
+      const Edition2012('Botswana', 'Gold : 0\nSilver : 1\nBronze : 0\nTotal : 1'),
+      const Edition2012('Uzbekistan', 'Gold : 0\nSilver : 0\nBronze : 3\nTotal : 3'),
+      const Edition2012('Greece', 'Gold : 0\nSilver : 0\nBronze : 2\nTotal : 2'),
+      const Edition2012('Afghanistan', 'Gold : 0\nSilver : 0\nBronze : 1\nTotal : 1'),
+    ];
+    _data2016 = <Edition2016>[
+      const Edition2016('United States', 'Gold : 46\nSilver : 37\nBronze : 38\nTotal : 121'),
+      const Edition2016('Great Britain', 'Gold : 27\nSilver : 23\nBronze : 17\nTotal : 67'),
+      const Edition2016('China', 'Gold : 26\nSilver : 18\nBronze : 26\nTotal : 70'),
+      const Edition2016('Russia', 'Gold : 19\nSilver : 17\nBronze : 20\nTotal : 56'),
+      const Edition2016('Germany', 'Gold : 17\nSilver : 10\nBronze : 15\nTotal : 42'),
+      const Edition2016('Japan', 'Gold : 12\nSilver : 8\nBronze : 21\nTotal : 41'),
+      const Edition2016('France', 'Gold : 10\nSilver : 18\nBronze : 14\nTotal : 42'),
+      const Edition2016('South Korea', 'Gold : 9\nSilver : 3\nBronze : 9\nTotal : 21'),
+      const Edition2016('Italy', 'Gold : 8\nSilver : 12\nBronze : 8\nTotal : 28'),
+      const Edition2016('Australia', 'Gold : 8\nSilver : 11\nBronze : 10\nTotal : 29'),
+      const Edition2016('Netherlands', 'Gold : 8\nSilver : 7\nBronze : 4\nTotal : 19'),
+      const Edition2016('Hungary', 'Gold : 8\nSilver : 3\nBronze : 4\nTotal : 15'),
+      const Edition2016('Brazil*', 'Gold : 7\nSilver : 6\nBronze : 6\nTotal : 19'),
+      const Edition2016('Spain', 'Gold : 7\nSilver : 4\nBronze : 6\nTotal : 17'),
+      const Edition2016('Kenya', 'Gold : 6\nSilver : 6\nBronze : 1\nTotal : 13'),
+      const Edition2016('Jamaica', 'Gold : 6\nSilver : 3\nBronze : 2\nTotal : 11'),
+      const Edition2016('Croatia', 'Gold : 5\nSilver : 3\nBronze : 2\nTotal : 10'),
+      const Edition2016('Cuba', 'Gold : 5\nSilver : 2\nBronze : 4\nTotal : 11'),
+      const Edition2016('New Zealand', 'Gold : 4\nSilver : 9\nBronze : 5\nTotal : 18'),
+      const Edition2016('Canada', 'Gold : 4\nSilver : 3\nBronze : 15\nTotal : 22'),
+      const Edition2016('Uzbekistan', 'Gold : 4\nSilver : 2\nBronze : 7\nTotal : 13'),
+      const Edition2016('Colombia', 'Gold : 3\nSilver : 2\nBronze : 3\nTotal : 8'),
+      const Edition2016('Switzerland', 'Gold : 3\nSilver : 2\nBronze : 2\nTotal : 7'),
+      const Edition2016('Iran', 'Gold : 3\nSilver : 1\nBronze : 4\nTotal : 8'),
+      const Edition2016('Greece', 'Gold : 3\nSilver : 1\nBronze : 2\nTotal : 6'),
+      const Edition2016('Argentina', 'Gold : 3\nSilver : 1\nBronze : 0\nTotal : 4'),
+      const Edition2016('Denmark', 'Gold : 2\nSilver : 6\nBronze : 7\nTotal : 15'),
+      const Edition2016('Sweden', 'Gold : 2\nSilver : 6\nBronze : 3\nTotal : 11'),
+      const Edition2016('South Africa', 'Gold : 2\nSilver : 6\nBronze : 2\nTotal : 10'),
+      const Edition2016('Kazakhstan', 'Gold : 2\nSilver : 5\nBronze : 10\nTotal : 17'),
+      const Edition2016('Ukraine', 'Gold : 2\nSilver : 5\nBronze : 4\nTotal : 11'),
+      const Edition2016('Serbia', 'Gold : 2\nSilver : 4\nBronze : 2\nTotal : 8'),
+      const Edition2016('Poland', 'Gold : 2\nSilver : 3\nBronze : 6\nTotal : 11'),
+      const Edition2016('North Korea', 'Gold : 2\nSilver : 3\nBronze : 2\nTotal : 7'),
+      const Edition2016('Belgium', 'Gold : 2\nSilver : 2\nBronze : 2\nTotal : 6'),
+      const Edition2016('Slovakia', 'Gold : 2\nSilver : 2\nBronze : 0\nTotal : 4'),
+      const Edition2016('Georgia', 'Gold : 2\nSilver : 1\nBronze : 4\nTotal : 7'),
+      const Edition2016('Azerbaijan', 'Gold : 1\nSilver : 7\nBronze : 10\nTotal : 18'),
+      const Edition2016('Belarus', 'Gold : 1\nSilver : 4\nBronze : 4\nTotal : 9'),
+      const Edition2016('Turkey', 'Gold : 1\nSilver : 3\nBronze : 4\nTotal : 8'),
+      const Edition2016('Armenia', 'Gold : 1\nSilver : 3\nBronze : 0\nTotal : 4'),
+      const Edition2016('Czech Republic', 'Gold : 1\nSilver : 2\nBronze : 7\nTotal : 10'),
+      const Edition2016('Ethiopia', 'Gold : 1\nSilver : 2\nBronze : 5\nTotal : 8'),
+      const Edition2016('Slovenia', 'Gold : 1\nSilver : 2\nBronze : 1\nTotal : 4'),
+      const Edition2016('Indonesia', 'Gold : 1\nSilver : 2\nBronze : 0\nTotal : 3'),
+      const Edition2016('Romania', 'Gold : 1\nSilver : 1\nBronze : 2\nTotal : 4'),
+      const Edition2016('Bahrain', 'Gold : 1\nSilver : 1\nBronze : 0\nTotal : 2'),
+      const Edition2016('Chinese Taipei', 'Gold : 1\nSilver : 0\nBronze : 2\nTotal : 3'),
+      const Edition2016('Bahamas', 'Gold : 1\nSilver : 0\nBronze : 1\nTotal : 2'),
+      const Edition2016('Fiji', 'Gold : 1\nSilver : 0\nBronze : 0\nTotal : 1'),
+      const Edition2016('Malaysia', 'Gold : 0\nSilver : 4\nBronze : 1\nTotal : 5'),
+      const Edition2016('Mexico', 'Gold : 0\nSilver : 3\nBronze : 2\nTotal : 5'),
+      const Edition2016('Venezuela', 'Gold : 0\nSilver : 2\nBronze : 1\nTotal : 3'),
+      const Edition2016('Algeria', 'Gold : 0\nSilver : 2\nBronze : 0\nTotal : 2'),
+      const Edition2016('Lithuania', 'Gold : 0\nSilver : 1\nBronze : 3\nTotal : 4'),
+      const Edition2016('Bulgaria', 'Gold : 0\nSilver : 1\nBronze : 2\nTotal : 3'),
+      const Edition2016('India', 'Gold : 0\nSilver : 1\nBronze : 1\nTotal : 2'),
+      const Edition2016('Burundi', 'Gold : 0\nSilver : 1\nBronze : 0\nTotal : 1'),
+      const Edition2016('Norway', 'Gold : 0\nSilver : 0\nBronze : 4\nTotal : 4'),
+      const Edition2016('Egypt', 'Gold : 0\nSilver : 0\nBronze : 3\nTotal : 3'),
+      const Edition2016('Israel', 'Gold : 0\nSilver : 0\nBronze : 2\nTotal : 2'),
+      const Edition2016('Austria', 'Gold : 0\nSilver : 0\nBronze : 1\nTotal : 1'),
+    ];
+    _data2020 = <Edition2020>[
+      const Edition2020('United States', 'Gold : 39\nSilver : 41\nBronze : 33\nTotal : 113'),
+      const Edition2020('China', 'Gold : 38\nSilver : 32\nBronze : 19\nTotal : 89'),
+      const Edition2020('Japan', 'Gold : 27\nSilver : 14\nBronze : 17\nTotal : 58'),
+      const Edition2020('Great Britain', 'Gold : 22\nSilver : 20\nBronze : 22\nTotal : 64'),
+      const Edition2020('ROC', 'Gold : 20\nSilver : 28\nBronze : 23\nTotal : 71'),
+      const Edition2020('Australia', 'Gold : 17\nSilver : 7\nBronze : 22\nTotal : 46'),
+      const Edition2020('Netherlands', 'Gold : 10\nSilver : 12\nBronze : 14\nTotal : 36'),
+      const Edition2020('France', 'Gold : 10\nSilver : 12\nBronze : 11\nTotal : 33'),
+      const Edition2020('Germany', 'Gold : 10\nSilver : 11\nBronze : 16\nTotal : 37'),
+      const Edition2020('Italy', 'Gold : 10\nSilver : 10\nBronze : 20\nTotal : 40'),
+      const Edition2020('Canada', 'Gold : 7\nSilver : 7\nBronze : 10\nTotal : 24'),
+      const Edition2020('Brazil', 'Gold : 7\nSilver : 6\nBronze : 8\nTotal : 21'),
+      const Edition2020('New Zealand', 'Gold : 7\nSilver : 6\nBronze : 7\nTotal : 20'),
+      const Edition2020('Cuba', 'Gold : 7\nSilver : 3\nBronze : 5\nTotal : 15'),
+      const Edition2020('Hungary', 'Gold : 6\nSilver : 7\nBronze : 7\nTotal : 20'),
+      const Edition2020('South Korea', 'Gold : 6\nSilver : 4\nBronze : 10\nTotal : 20'),
+      const Edition2020('Poland', 'Gold : 4\nSilver : 5\nBronze : 5\nTotal : 14'),
+      const Edition2020('Czech Republic', 'Gold : 4\nSilver : 4\nBronze : 3\nTotal : 11'),
+      const Edition2020('Kenya', 'Gold : 4\nSilver : 4\nBronze : 2\nTotal : 10'),
+      const Edition2020('Norway', 'Gold : 4\nSilver : 2\nBronze : 2\nTotal : 8'),
+      const Edition2020('Jamaica', 'Gold : 4\nSilver : 1\nBronze : 4\nTotal : 9'),
+      const Edition2020('Spain', 'Gold : 3\nSilver : 8\nBronze : 6\nTotal : 17'),
+      const Edition2020('Sweden', 'Gold : 3\nSilver : 6\nBronze : 0\nTotal : 9'),
+      const Edition2020('Switzerland', 'Gold : 3\nSilver : 4\nBronze : 6\nTotal : 13'),
+      const Edition2020('Denmark', 'Gold : 3\nSilver : 4\nBronze : 4\nTotal : 11'),
+      const Edition2020('Croatia', 'Gold : 3\nSilver : 3\nBronze : 2\nTotal : 8'),
+      const Edition2020('Iran', 'Gold : 3\nSilver : 2\nBronze : 2\nTotal : 7'),
+      const Edition2020('Serbia', 'Gold : 3\nSilver : 1\nBronze : 5\nTotal : 9'),
+      const Edition2020('Belgium', 'Gold : 3\nSilver : 1\nBronze : 3\nTotal : 7'),
+      const Edition2020('Bulgaria', 'Gold : 3\nSilver : 1\nBronze : 2\nTotal : 6'),
+      const Edition2020('Slovenia', 'Gold : 3\nSilver : 1\nBronze : 1\nTotal : 5'),
+      const Edition2020('Uzbekistan', 'Gold : 3\nSilver : 0\nBronze : 2\nTotal : 5'),
+      const Edition2020('Georgia', 'Gold : 2\nSilver : 5\nBronze : 1\nTotal : 8'),
+      const Edition2020('Chinese Taipei', 'Gold : 2\nSilver : 4\nBronze : 6\nTotal : 12'),
+      const Edition2020('Turkey', 'Gold : 2\nSilver : 2\nBronze : 9\nTotal : 13'),
+      const Edition2020('Greece', 'Gold : 2\nSilver : 1\nBronze : 1\nTotal : 4'),
+      const Edition2020('Ecuador', 'Gold : 2\nSilver : 1\nBronze : 0\nTotal : 3'),
+      const Edition2020('Ireland', 'Gold : 2\nSilver : 0\nBronze : 2\nTotal : 4'),
+      const Edition2020('Qatar', 'Gold : 2\nSilver : 0\nBronze : 1\nTotal : 3'),
+      const Edition2020('Bahamas', 'Gold : 2\nSilver : 0\nBronze : 0\nTotal : 2'),
+      const Edition2020('Ukraine', 'Gold : 1\nSilver : 6\nBronze : 12\nTotal : 19'),
+      const Edition2020('Belarus', 'Gold : 1\nSilver : 3\nBronze : 3\nTotal : 7'),
+      const Edition2020('Romania', 'Gold : 1\nSilver : 3\nBronze : 0\nTotal : 4'),
+      const Edition2020('India', 'Gold : 1\nSilver : 2\nBronze : 4\nTotal : 7'),
+      const Edition2020('Hong Kong', 'Gold : 1\nSilver : 2\nBronze : 3\nTotal : 6'),
+      const Edition2020('Philippines', 'Gold : 1\nSilver : 2\nBronze : 1\nTotal : 4'),
+      const Edition2020('South Africa', 'Gold : 1\nSilver : 2\nBronze : 0\nTotal : 3'),
+      const Edition2020('Austria', 'Gold : 1\nSilver : 1\nBronze : 5\nTotal : 7'),
+      const Edition2020('Egypt', 'Gold : 1\nSilver : 1\nBronze : 4\nTotal : 6'),
+      const Edition2020('Indonesia', 'Gold : 1\nSilver : 1\nBronze : 3\nTotal : 5'),
+      const Edition2020('Ethiopia', 'Gold : 1\nSilver : 1\nBronze : 2\nTotal : 4'),
+      const Edition2020('Tunisia', 'Gold : 1\nSilver : 1\nBronze : 0\nTotal : 2'),
+      const Edition2020('Estonia', 'Gold : 1\nSilver : 0\nBronze : 1\nTotal : 2'),
+      const Edition2020('Bermuda', 'Gold : 1\nSilver : 0\nBronze : 0\nTotal : 1'),
+      const Edition2020('Colombia', 'Gold : 0\nSilver : 4\nBronze : 1\nTotal : 5'),
+      const Edition2020('Azerbaijan', 'Gold : 0\nSilver : 3\nBronze : 4\nTotal : 7'),
+      const Edition2020('Dominican Republic', 'Gold : 0\nSilver : 3\nBronze : 2\nTotal : 5'),
+      const Edition2020('Armenia', 'Gold : 0\nSilver : 2\nBronze : 2\nTotal : 4'),
+      const Edition2020('Kyrgyzstan', 'Gold : 0\nSilver : 2\nBronze : 1\nTotal : 3'),
+      const Edition2020('Mongolia', 'Gold : 0\nSilver : 1\nBronze : 3\nTotal : 4'),
+      const Edition2020('Argentina', 'Gold : 0\nSilver : 1\nBronze : 2\nTotal : 3'),
+      const Edition2020('Jordan', 'Gold : 0\nSilver : 1\nBronze : 1\nTotal : 2'),
+      const Edition2020('Bahrain', 'Gold : 0\nSilver : 1\nBronze : 0\nTotal : 1'),
+      const Edition2020('Kazakhstan', 'Gold : 0\nSilver : 0\nBronze : 8\nTotal : 8'),
+      const Edition2020('Mexico', 'Gold : 0\nSilver : 0\nBronze : 4\nTotal : 4'),
+      const Edition2020('Finland', 'Gold : 0\nSilver : 0\nBronze : 2\nTotal : 2'),
+      const Edition2020('Botswana', 'Gold : 0\nSilver : 0\nBronze : 1\nTotal : 1'),
     ];
 
     _shapeSource = MapShapeSource.asset(
@@ -213,7 +367,7 @@ class mapPage extends State<IntroPage> {
 
     super.initState();
 // Tri et sélection des 10 premiers pays
-    var tempList = _data
+    var tempList = _data2020
         .map((data) => ChartData(data.country, data.total))
         .toList()
       ..sort((a, b) => b.totalMedals.compareTo(a.totalMedals));
@@ -447,7 +601,7 @@ class mapPage extends State<IntroPage> {
                         ),
                         primaryYAxis: NumericAxis(
                           minimum: 0,
-                          maximum: 3200, // Limite l'axe Y entre 0 et 3000
+                          maximum: 2700, // Limite l'axe Y entre 0 et 3000
                           interval: 500,
                           labelStyle: GoogleFonts.nunito(color: Colors.grey[800], fontWeight: FontWeight.w800), // Style de police pour les labels de l'axe Y
                         ),
@@ -494,6 +648,53 @@ class Model {
   get countryCode => null;
 }
 
+class Edition2012 {
+  final String country;
+  final String palmares;
+
+  const Edition2012(this.country, this.palmares);
+
+  // Méthode pour obtenir le total des médailles
+  int get total {
+    // Extrait la partie 'Total' de la chaîne 'palmares' et convertit en entier
+    final totalString = palmares.split('\n').last.split(': ').last;
+    return int.tryParse(totalString) ?? 0; // Renvoie 0 si la conversion échoue
+  }
+
+  get countryCode => null;
+}
+
+class Edition2016 {
+  final String country;
+  final String palmares;
+
+  const Edition2016(this.country, this.palmares);
+
+  // Méthode pour obtenir le total des médailles
+  int get total {
+    // Extrait la partie 'Total' de la chaîne 'palmares' et convertit en entier
+    final totalString = palmares.split('\n').last.split(': ').last;
+    return int.tryParse(totalString) ?? 0; // Renvoie 0 si la conversion échoue
+  }
+
+  get countryCode => null;
+}
+
+class Edition2020 {
+  final String country;
+  final String palmares;
+
+  const Edition2020(this.country, this.palmares);
+
+  // Méthode pour obtenir le total des médailles
+  int get total {
+    // Extrait la partie 'Total' de la chaîne 'palmares' et convertit en entier
+    final totalString = palmares.split('\n').last.split(': ').last;
+    return int.tryParse(totalString) ?? 0; // Renvoie 0 si la conversion échoue
+  }
+
+  get countryCode => null;
+}
 
 class SearchSection extends StatefulWidget {
   final Function(String) onSearch;
@@ -512,7 +713,7 @@ class _SearchSectionState extends State<SearchSection> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.grey[200],
+      color: Color(0xFFDCCCA3),
       borderRadius: BorderRadius.circular(20.0),
       child: Padding(
         padding: EdgeInsets.fromLTRB(10, 25, 10, 25),
@@ -539,7 +740,7 @@ class _SearchSectionState extends State<SearchSection> {
                       decoration: InputDecoration(
                         contentPadding: EdgeInsets.all(10),
                         border: InputBorder.none,
-                        hintText: "Entrez un pays...",
+                        hintText: "Select a country...",
                         prefixIcon: Icon(Icons.search),
                       ),
                       onSubmitted: (value) {
@@ -554,7 +755,7 @@ class _SearchSectionState extends State<SearchSection> {
                   height: 50,
                   width: 50,
                   decoration: BoxDecoration(
-                    color: Colors.green,
+                    color: Color(0xFF6d5da7),
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey,
@@ -568,6 +769,7 @@ class _SearchSectionState extends State<SearchSection> {
                   ),
                   child: IconButton(
                     icon: Icon(Icons.search),
+                    color: Colors.white,
                     onPressed: () {
                       widget.onSearch(searchController.text.trim());
                     },
