@@ -23,6 +23,7 @@ class mapPage extends State<IntroPage> {
   late List<Model> _data2012;
   late List<Model> _data2016;
   late List<Model> _data2020;
+  late List<Athlete> _dataprospects;
   late sliders.SfRangeValues _yearValues;
   late List<ChartData> _chartData;
   bool useData2008 = false;
@@ -409,6 +410,9 @@ class mapPage extends State<IntroPage> {
       const Model('Finland', 'Gold : 0\nSilver : 0\nBronze : 2\nTotal : 2', 2),
       const Model('Botswana', 'Gold : 0\nSilver : 0\nBronze : 1\nTotal : 1', 1),
     ];
+    _dataprospects = <Athlete>[
+      const Athlete('Marchand', 'Léon', 21, 'France', '5 world championship gold medals\n 1 world championship silver medal', 'Swimming'),
+    ];
     _zoomPanBehavior = MapZoomPanBehavior();
     updateChartData();
     _shapeSource();
@@ -642,6 +646,7 @@ class mapPage extends State<IntroPage> {
 // carte + graphchart
   @override
   Widget build(BuildContext context) {
+
     return Container(
       color: const Color(0xFF4A2545), // Couleur de fond globale
       child: Column(
@@ -750,7 +755,7 @@ class mapPage extends State<IntroPage> {
                                 ],
                               ),
                               Container(
-                                alignment: Alignment.bottomCenter,
+                                alignment: Alignment.bottomRight,
                                 child: SfCartesianChart(
                                   title: ChartTitle(
                                     text: 'Top Olympic Medal Countries',
@@ -781,6 +786,7 @@ class mapPage extends State<IntroPage> {
                                   ],
                                 ),
                               ),
+                              //MyListView(),
                             ],
                           ),
                         ],
@@ -796,6 +802,7 @@ class mapPage extends State<IntroPage> {
     );
   }
 }
+
 class Palma {
   final String country;
   final String sport;
@@ -806,6 +813,7 @@ class Palma {
 
   const Palma(this.country, this.sport, this.gold, this.silver, this.bronze, this.total);
 }
+
 class Model {
   final String country;
   final String palmares;
@@ -821,6 +829,17 @@ class Model {
   }
 
   get countryCode => null;
+}
+
+class Athlete {
+  final String nom;
+  final String prenom;
+  final int age;
+  final String nationalite;
+  final String palmares;
+  final String sport;
+
+  const Athlete(this.nom, this.prenom, this.age, this.nationalite, this.palmares, this.sport);
 }
 
 class SearchSection extends StatefulWidget {
@@ -909,7 +928,6 @@ class _SearchSectionState extends State<SearchSection> {
       ),
     );
   }
-
 }
 
 class ChartData extends Model {
@@ -924,5 +942,45 @@ class ChartData extends Model {
     // Extrait la partie 'Total' de la chaîne 'palmares' et convertit en entier
     final totalString = palmares.split('\n').last.split(': ').last;
     return int.tryParse(totalString) ?? 0; // Renvoie 0 si la conversion échoue
+  }
+}
+
+
+class MyListView extends StatelessWidget {
+  // Créer une liste d'athlètes fictive
+  final List<Athlete> athletes = [
+    const Athlete('Marchand', 'Léon', 21, 'France', '5 world championship gold medals\n 1 world championship silver medal', 'Swimming'),
+    const Athlete('tfgvy', 'Léon', 21, 'France', '5 world championship gold medals\n 1 world championship silver medal', 'Swimming'),
+    const Athlete('dfghgf', 'Léon', 21, 'France', '5 world championship gold medals\n 1 world championship silver medal', 'Swimming'),
+    // Ajoutez d'autres athlètes ici
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        // Autres widgets à afficher avant la ListView
+        Text(
+          'Top Prospects',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Colors.grey[800],
+            fontWeight: FontWeight.w800,
+            fontSize: 24,
+          ),
+        ),
+        Expanded(
+          child: ListView.builder(
+            itemCount: athletes.length, // Nombre d'athlètes dans la liste
+            itemBuilder: (context, index) {
+              return ListTile(
+                title: Text('${athletes[index].prenom} ${athletes[index].nom}'),
+              );
+            },
+          ),
+        ),
+        // Autres widgets à afficher après la ListView
+      ],
+    );
   }
 }
