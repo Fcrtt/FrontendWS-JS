@@ -1,11 +1,24 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:syncfusion_flutter_maps/maps.dart';
 import 'package:syncfusion_flutter_sliders/sliders.dart' as sliders;
 import 'package:syncfusion_flutter_core/theme.dart';
 import 'package:intl/intl.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
+
+const Color violet = Color(0xFF4A2545);
+const Color beige = Color(0xFFDCCCA3);
+
+
+import 'package:syncfusion_flutter_sliders/sliders.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:intl/intl.dart';
+
+
+
+
 
 const Color violet = Color(0xFF4A2545);
 const Color beige = Color(0xFFDCCCA3);
@@ -649,6 +662,7 @@ class mapPage extends State<IntroPage> {
 
     return Container(
       color: const Color(0xFF4A2545), // Couleur de fond globale
+
       child: Column(
         // Utilisation d'une Column pour disposer les widgets verticalement
         children: [
@@ -715,6 +729,7 @@ class mapPage extends State<IntroPage> {
                                       });
                                     },
                                     child: Text('2012'),
+
                                   ),
                                   TextButton(
                                     onPressed: () {
@@ -728,6 +743,7 @@ class mapPage extends State<IntroPage> {
                                     },
                                     child: Text('All time'),
                                   ),
+
                                   TextButton(
                                     onPressed: () {
                                       setState(() {
@@ -751,6 +767,7 @@ class mapPage extends State<IntroPage> {
                                       });
                                     },
                                     child: Text('2020'),
+
                                   ),
                                 ],
                               ),
@@ -796,6 +813,7 @@ class mapPage extends State<IntroPage> {
                 ),
               ],
             ),
+
           ),
         ],
       ),
@@ -847,19 +865,24 @@ class SearchSection extends StatefulWidget {
 
   SearchSection({required this.onSearch});
 
+
   @override
   _SearchSectionState createState() => _SearchSectionState();
 }
 
 class _SearchSectionState extends State<SearchSection> {
+
   TextEditingController searchController = TextEditingController();
   sliders.SfRangeValues _yearValues = sliders.SfRangeValues(DateTime(1896), DateTime(2024));
+
 
   @override
   Widget build(BuildContext context) {
     return Material(
+
       color: Color(0xFFDCCCA3),
       borderRadius: BorderRadius.circular(20.0),
+
       child: Padding(
         padding: EdgeInsets.fromLTRB(10, 25, 10, 25),
         child: Column(
@@ -872,6 +895,7 @@ class _SearchSectionState extends State<SearchSection> {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(30),
+
                       boxShadow: [
                         BoxShadow(
                           color: Colors.grey,
@@ -892,6 +916,7 @@ class _SearchSectionState extends State<SearchSection> {
                         print("Soumission de la recherche : $value"); // Pour le débogage
                         widget.onSearch(value.trim());
                       },
+
                     ),
                   ),
                 ),
@@ -900,11 +925,14 @@ class _SearchSectionState extends State<SearchSection> {
                   height: 50,
                   width: 50,
                   decoration: BoxDecoration(
+
                     color: Color(0xFF6d5da7),
+
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey,
                         blurRadius: 4,
+
                         offset: Offset(0, 4),
                       ),
                     ],
@@ -942,6 +970,7 @@ class ChartData extends Model {
     // Extrait la partie 'Total' de la chaîne 'palmares' et convertit en entier
     final totalString = palmares.split('\n').last.split(': ').last;
     return int.tryParse(totalString) ?? 0; // Renvoie 0 si la conversion échoue
+
   }
 }
 
