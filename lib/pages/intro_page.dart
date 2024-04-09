@@ -517,10 +517,19 @@ class mapPage extends State<IntroPage> {
                         border: Border.all(color: Color(0xFF4A2545)),
                         borderRadius: BorderRadius.circular(10.0),
                       ),
-                      child: Text(
-                        "Palmares\n${countryData!.palmares}",
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.nunito(fontWeight: FontWeight.bold, fontSize: 24, color: Color(0xFF4A2545)),
+                      child: Column(
+                        children: [
+                          Text(
+                            "Palmares",
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.nunito(fontWeight: FontWeight.bold, fontSize: 24, color: Color(0xFF4A2545)),
+                          ),
+                          Text(
+                            countryData!.palmares,
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.nunito(fontWeight: FontWeight.bold, fontSize: 22, color: Color(0xFF4A2545)),
+                          ),
+                        ],
                       ),
                     ),
                     Container(
@@ -535,14 +544,14 @@ class mapPage extends State<IntroPage> {
                           textAlign: TextAlign.left,
                           style: GoogleFonts.nunito(
                             fontWeight: FontWeight.bold,
-                            fontSize: 18,
+                            fontSize: 24,
                             color: Color(0xFF4A2545),
                           ),
                         ),
                         Text(
                           countryData!.bestAthlete,
                           textAlign: TextAlign.center,
-                          style: GoogleFonts.nunito(fontWeight: FontWeight.bold, fontSize: 18, color: Color(0xFF4A2545)),
+                          style: GoogleFonts.nunito(fontWeight: FontWeight.bold, fontSize: 22, color: Color(0xFF4A2545)),
                         ),
                       ]),
                     ),
@@ -558,14 +567,14 @@ class mapPage extends State<IntroPage> {
                           textAlign: TextAlign.left,
                           style: GoogleFonts.nunito(
                             fontWeight: FontWeight.bold,
-                            fontSize: 18,
+                            fontSize: 24,
                             color: Color(0xFF4A2545),
                           ),
                         ),
                         Text(
                           countryData!.candidat,
                           textAlign: TextAlign.center,
-                          style: GoogleFonts.nunito(fontWeight: FontWeight.bold, fontSize: 18, color: Color(0xFF4A2545)),
+                          style: GoogleFonts.nunito(fontWeight: FontWeight.bold, fontSize: 22, color: Color(0xFF4A2545)),
                         ),
                       ]),
                     ),
@@ -702,19 +711,16 @@ class mapPage extends State<IntroPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color(0xFF4A2545), // Couleur de fond globale
+      color: const Color(0xFF4A2545),
       child: Column(
-        // Utilisation d'une Column pour disposer les widgets verticalement
         children: [
           SearchSection(onSearch: showCountryInfo),
-          // appel de la classe SearchSection (barre de recherche)
-
           Expanded(
             child: Row(
               children: [
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.all(10.0),
+                    padding: EdgeInsets.fromLTRB(0, 10, 10, 0),
                     child: PhysicalModel(
                       color: const Color(0xFFDCCCA3),
                       borderRadius: BorderRadius.circular(20.0),
@@ -724,7 +730,7 @@ class mapPage extends State<IntroPage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.fromLTRB(0, 10, 10, 10),
+                  padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
                   child: Container(
                     width: 400,
                     decoration: BoxDecoration(
@@ -732,7 +738,7 @@ class mapPage extends State<IntroPage> {
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: Padding(
-                      padding: EdgeInsets.only(right: 20),
+                      padding: EdgeInsets.only(right: 0),
                       child: Row(
                         children: [
                           Column(
