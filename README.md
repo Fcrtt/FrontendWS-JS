@@ -9,9 +9,9 @@ La Carte des Statistiques Olympiques est une application développée avec Flutt
 
 ## Fonctionnalités
 
-Visualisation Cartographique: Affichage dynamique des performances des pays sur une carte du monde.\n
-Données Détailées: Accès détaillé aux statistiques des médailles par pays et par discipline.\n
-Interaction Intuitive: Navigation fluide et intuitive pour explorer les données.
+- **Visualisation Cartographique**: Affichage dynamique des performances des pays sur une carte du monde.
+- **Données Détailées**: Accès détaillé aux statistiques des médailles par pays et par discipline.
+- **Interaction Intuitive**: Navigation fluide et intuitive pour explorer les données.
 
 ## Outils et Technologies
 
