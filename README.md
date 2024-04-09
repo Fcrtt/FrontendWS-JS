@@ -1,17 +1,17 @@
-# dashboard
+# Dashboard
 
-# Dashboard Flutter avec Carte du Monde
+# Dashboard Flutter Carte du Monde
 
 ## À propos du projet
 
-Ce projet est un dashboard interactif développé avec Flutter et Android Studio.
-Il présente une carte du monde interactive sur laquelle l'utilisateur peut sélectionner un pays. Une fois un pays sélectionné, une liste d'informations
-pertinentes à propos de ce pays apparaît à droite de l'écran.
+La Carte des Statistiques Olympiques est une application développée avec Flutter, conçue pour offrir une visualisation intuitive et interactive des données sur les performances des différents pays aux Jeux Olympiques d'été. Elle fournit une manière efficace d'accéder et d'analyser des informations statistiques essentielles concernant les médailles, les disciplines sportives sur les éditions récentes des Jeux Olympiques.
+
 
 ## Fonctionnalités
 
-- **Carte du Monde Interactif** : Une carte mondiale sur laquelle les utilisateurs peuvent cliquer pour sélectionner un pays.
-- **Affichage d'Informations** : À la sélection d'un pays, une liste d'informations s'affiche à droite, offrant des détails sur le pays sélectionné.
+Visualisation Cartographique: Affichage dynamique des performances des pays sur une carte du monde.
+Données Détailées: Accès détaillé aux statistiques des médailles par pays et par discipline.
+Interaction Intuitive: Navigation fluide et intuitive pour explorer les données.
 
 ## Outils et Technologies
 
@@ -20,10 +20,8 @@ pertinentes à propos de ce pays apparaît à droite de l'écran.
 
 ## Équipe de Développement
 
-- Felix
-- Theo
-
-Nous sommes deux collaborateurs travaillant ensemble sur ce projet pour créer une expérience utilisateur interactive et informative.
+- Felix Courtin
+- Theo Lucq
 
 ## Comment utiliser
 
@@ -41,11 +39,4 @@ Si vous souhaitez contribuer au projet, veuillez nous contacter ou soumettre une
 Nous espérons que vous trouverez ce projet utile et intéressant. Pour toute question ou suggestion, n'hésitez pas à ouvrir une issue ou à nous contacter directement.
 
 
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 
