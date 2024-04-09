@@ -18,6 +18,12 @@ La Carte des Statistiques Olympiques est une application développée avec Flutt
 - **Flutter** : Utilisé pour le développement de l'interface utilisateur et la logique applicative.
 - **Android Studio** : Environnement de développement intégré (IDE) pour la gestion du projet Flutter.
 
+## Captures d'écran
+
+![Carte](assets/carteex.png)
+![Country Data](assets/carteex2.png)
+
+
 ## Équipe de Développement
 
 - Felix Courtin
